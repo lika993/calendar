@@ -1,0 +1,17 @@
+@import "normalize.css";
+@import "./mixins";
+@import "./variables";
+
+@include font-face('Roboto', 'Roboto-Regular', 400, normal);
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+@import "./sections/section/section.scss";

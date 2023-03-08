@@ -5,15 +5,10 @@ const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/js/common.js',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
     rules: [
-      {
-        test: /\.ts$/,
-        use: ['babel-loader', 'ts-loader'],
-        exclude: /node_modules/,
-      },
       {
         test: /\.pug$/,
         use: ['pug-loader'],
@@ -52,7 +47,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.js'],
   },
   output: {
     filename: 'bundle.js',
@@ -61,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.pug'),
+      template: path.join(__dirname, 'src', 'index.html'),
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({

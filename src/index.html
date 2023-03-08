@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <h1 class="headline headline--first">
+            Тестовое задание
+        </h1>
+        <div class="info">
+            <div class="popup popup-form-wrapper">
+                <div class="popup-card event-card">
+                    <button class="close-popup"></button>
+                    <h2 class="form-headline">
+                        Запись на <br><span id="event-name" class="event-name"></span>
+                    </h2>
+                    <form class="popup-form" action="/">
+                        <div class="popup-form-row popup-form-row--user">
+                            <input type="text" class="field-name" name="name" placeholder="Имя">
+                        </div>
+                        <div class="popup-form-row popup-form-row--user">
+                            <input type="text" class="field-name" name="lastname" placeholder="Фамилия">
+                        </div>
+                        <div class="popup-form-row popup-form-row--phone">
+                            <input id="phone" class="field-phone" name="phone" type="text" placeholder="Телефон">
+                        </div>
+                        <div class="popup-form-row popup-form-row--email">
+                            <input type="email" class="field-email" name="email" placeholder="Email">
+                        </div>
+                        <div class="popup-form-row popup-form-row--organization">
+                            <input type="text" class="field-organization"  name="organization" placeholder="Организация">
+                        </div>
+                        <button class="btn-blue">Стать участником</button>
+                    </form>
+                </div>
+            </div>
+            <div class="events-details">
+                <div class="events-details__headline">
+                    <h2 class="events-title">
+                        Мероприятия
+                    </h2>
+                    <div class="filter-list">
+                        <div class="filter-list__label">
+                            Сортировать по убыванию даты
+                        </div>
+                        <div class="filter-list__items-wrap">
+                            <div class="filter-list__item filter-list__item--up" id="sort-up">
+                                Сортировать по возврастанию даты
+                            </div>
+                            <div class="filter-list__item filter-list__item--down" id="sort-down">
+                                Сортировать по убыванию даты
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="events-list">
+                </div>
+            </div>
+            <div class="calendar-wrapper">
+                <div class="calendar-headline">
+                    <button id="btnPrev" class="calendar-btn calendar-prev-btn" type="button"></button>
+                    <h3 class="calendar-title">Выберите дату мероприятия</h3>
+                    <button id="btnNext" class="calendar-btn calendar-next-btn" type="button"></button>
+                </div>
+                <div class="info">
+                    <div id="divCal" class="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

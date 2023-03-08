@@ -145,6 +145,7 @@ let clickFilterListItem = (target) => {
 }
 
 
+
 let replaceSelectText = (target) => {
   document.querySelector('.filter-list__label').innerText = target.innerText;
 }
